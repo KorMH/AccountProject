@@ -1,11 +1,13 @@
 package org.zerobase.accountproject.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import redis.embedded.RedisServer;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.io.IOException;
 
 @Configuration
 public class LocalRedisConfig {
@@ -15,7 +17,7 @@ public class LocalRedisConfig {
     private RedisServer redisServer;
 
     @PostConstruct
-    public void startRedis(){
+    public void startRedis() throws IOException {
         redisServer = new RedisServer(redisPort);
         redisServer.start();
     }
@@ -24,4 +26,5 @@ public class LocalRedisConfig {
     public void stopRedis() {
         redisServer.stop();
     }
+
 }
