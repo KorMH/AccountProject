@@ -6,6 +6,10 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.zerobase.accountproject.dto.ErrorResponse;
+
+import static org.zerobase.accountproject.type.ErrorCode.INTERNAL_SERVER_ERROR;
+import static org.zerobase.accountproject.type.ErrorCode.INVALID_REQUEST;
 
 @Slf4j
 @RestControllerAdvice
