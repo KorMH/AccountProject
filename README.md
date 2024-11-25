@@ -1,6 +1,13 @@
 
 [ Spring boot와 Java를 활용하여 Account(계좌 관리) 시스템을 만드는 프로젝트 과제 ]
 
+- 개발환경
+- Spring 2.7.17
+- java 8
+- lombok
+- jpa
+- embeded redis
+
 1️⃣ 공통 요구사항
 - Spring boot와 Java를 활용합니다.
 - 단위테스트를 작성하여 작성한 코드를 검증합니다.
